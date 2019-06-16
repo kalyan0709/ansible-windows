@@ -1,0 +1,18 @@
+nsible windows link
+yum update -y
+yum install *pip -y
+yum -y install python=pip
+to check pip --version 
+in vim /etc/ansible/hosts
+[win]
+192.168.2.8		ip addr of router ipconfig in powershell
+
+
+
+[win:vars]
+ansible_user=keerthi     #windows os
+ansible_password=0709	 #windows os
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+then execute cmd
+ansible 192.168.2.8 -i /etc/ansible/hosts -m win_ping
